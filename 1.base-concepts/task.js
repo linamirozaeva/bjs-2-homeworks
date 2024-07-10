@@ -11,7 +11,7 @@ function solveEquation(a, b, c) {
 	}
 	if (d === 0) {
 		let root0 = -b / (2 * a);
-		arr.push(x0);
+		arr.push(root0);
 		return arr;
 	}
 	return arr;
