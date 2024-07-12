@@ -57,10 +57,10 @@ function averageEvenElementsWorker(...arr){
       countEvenElement += 1;
     }
   }
-  if (arr.length > 0){
-    return sumEvenElement / countEvenElement;
+  if (arr.length === 0){
+    return 0;
   } else {
-    return 0
+    return sumEvenElement / countEvenElement;
   }
 }
 
