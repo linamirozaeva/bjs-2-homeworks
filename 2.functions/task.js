@@ -29,7 +29,7 @@ function summElementsWorker(...arr){
 function differenceMaxMinWorker(...arr){
   let max = Math.max(...arr);
   let min = Math.min(...arr);
-  if (arr.length === 0){
+  if (arr.length === -Infinity){
     return 0;
   }
   return max - min;
@@ -52,7 +52,7 @@ function averageEvenElementsWorker(...arr){
   let sumEvenElement = 0;
   let countEvenElement = 0;
   for (let i = 0; i < arr.length; i++){
-    if (arr.length === 0){
+    if (arr.length === NaN){
       return 0;
     }
     if (arr[i] % 2 === 0){
