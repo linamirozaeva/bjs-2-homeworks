@@ -8,13 +8,12 @@ function Student(name, gender, age) {
     this.subject = subjectName;
   }
   Student.prototype.addMarks = function(...marksToAdd){
-    if (marksToAdd === undefined || marksToAdd.length == 0) {
-        return 0;
-    }
     if (this.marks) {
       this.marks.push(...marksToAdd);
     }
-
+    if (this.marks.length === 0) {
+        return 0;
+    }
   }
   Student.prototype.getAverage = function() {
     if (this.marks) {
@@ -31,8 +30,10 @@ function Student(name, gender, age) {
   let student1 = new Student("Василиса", "женский", 19);
   let student2 = new Student("Артем", "мужской", 25);
   student1.setSubject("Algebra");
-  student1.addMarks(4, 5, 4, 2, 5);
-  student1.addMarks(5, 5, 5, 5);
-  student1.exclude('плохое учебное посещение');
+  student1.addMarks(4, 5, 4, 5);
+  student1.exclude('плохое поведение');
+  student2.setSubject("Geometry");
+  student2.addMarks(4, 4, 4, 4);
+  student2.exclude('плохая учёба');
   console.log(student1);
   console.log(student2);
