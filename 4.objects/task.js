@@ -11,6 +11,9 @@ function Student(name, gender, age) {
     if (this.marks) {
         this.marks.push(...marksToAdd);
     }
+    else {
+        return 0;
+    }
   }
   Student.prototype.getAverage = function() {
     if (this.marks) {
