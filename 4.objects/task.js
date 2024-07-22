@@ -9,7 +9,7 @@ function Student(name, gender, age) {
   }
   Student.prototype.addMarks = function(...marksToAdd){
     if (marksToAdd == 0){
-        return 0;
+        this.marks.push(...marksToAdd);
     }
     if (this.marks) {
       this.marks.push(...marksToAdd);
