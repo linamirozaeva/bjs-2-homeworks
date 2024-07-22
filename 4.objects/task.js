@@ -8,9 +8,13 @@ function Student(name, gender, age) {
     this.subject = subjectName;
   }
   Student.prototype.addMarks = function(...marksToAdd){
+    if (marksToAdd === undefined || marksToAdd.length == 0) {
+        return 0;
+    }
     if (this.marks) {
       this.marks.push(...marksToAdd);
     }
+
   }
   Student.prototype.getAverage = function() {
     if (this.marks) {
