@@ -34,7 +34,7 @@ console.log(sherlock.state);
 class Magazine extends PrintEditionItem {
     constructor (name, releaseDate, pagesCount) {
         super(name, releaseDate, pagesCount);
-        this.type = "Magazine";
+        this.type = "magazine";
     }
 }
 class Book extends PrintEditionItem {
