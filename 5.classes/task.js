@@ -72,14 +72,13 @@ console.log(picknick.state);
 
 
 class Library { 
-    constructor (name, releaseDate, pagesCount) {
-        super(releaseDate, pagesCount);
+    constructor (name) {
         this.name = name;
         this.books = [];
     }
     addBook(book) {
         if (book.state > 30) {
-            book.state.push(book)
+            this.books.push(book)
         }
     }
     findBookBy(type, value) {
