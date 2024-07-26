@@ -48,9 +48,13 @@
     try {
       return new Triangle(a, b, c);
     } catch (e) {
-      return {
-        area: `Ошибка! Треугольник не существует`,
-        perimeter: `Ошибка! Треугольник не существует`
-      }
-    }
+        return  new Object({
+            getPerimeter() {
+                return `Ошибка! Такой треугольник не существует`;
+            },
+            getArea() {
+                return `Ошибка! Такой треугольник не существует`;
+            }
+        });
   }
+}
