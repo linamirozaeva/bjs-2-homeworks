@@ -34,7 +34,7 @@ console.log(sherlock.state);
 class Magazine extends PrintEditionItem {
     constructor (name, releaseDate, pagesCount) {
         super(name, releaseDate, pagesCount);
-        this.type = "magazine";
+        this.type = "Magazine";
     }
 }
 class Book extends PrintEditionItem {
@@ -71,13 +71,14 @@ console.log(picknick.state);
 
 
 
-class Library { 
-    constructor (name) {
+class Library extends PrintEditionItem { 
+    constructor (name, releaseDate, pagesCount) {
+        super(releaseDate, pagesCount);
         this.name = name;
         this.books = [];
     }
     addBook(book) {
-        if (book.state > 30) {
+        if (this.state > 30) {
             this.books.push(book)
         }
     }
