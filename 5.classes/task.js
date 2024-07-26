@@ -71,14 +71,14 @@ console.log(picknick.state);
 
 
 
-class Library extends PrintEditionItem { 
+class Library { 
     constructor (name, releaseDate, pagesCount) {
         super(releaseDate, pagesCount);
         this.name = name;
         this.books = [];
     }
     addBook(book) {
-        if (this.state > 30) {
+        if (book.state > 30) {
             this.books.push(book)
         }
     }
